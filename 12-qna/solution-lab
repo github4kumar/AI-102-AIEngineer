@@ -1,0 +1,5 @@
+@echo offSETLOCAL ENABLEDELAYEDEXPANSION
+rem Set variables
+set prediction_url="https://kumar-lab11.cognitiveservices.azure.com/language/:query-knowledgebases?projectName=LearnFAQ&api-version=2021-10-01&deploymentName=production"
+set key=4d7246263928497ea0e2cfbce597be50
+curl -X POST !prediction_url! -H "Ocp-Apim-Subscription-Key: !key!" -H "Content-Type: application/json" -d "{'question': 'What is a learning Path?' }"
